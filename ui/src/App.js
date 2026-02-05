@@ -11,7 +11,7 @@ function App() {
   const [unreadCount, setUnreadCount] = useState(0);
   const messagesEndRef = useRef(null);
 
-  const API_URL = 'http://127.0.0.1:5000';
+  const API_URL = process.env.REACT_APP_BACKEND_URL ;
 
   // Auto-scroll to bottom when new messages arrive
   const scrollToBottom = () => {
@@ -20,6 +20,7 @@ function App() {
 
   useEffect(() => {
     scrollToBottom();
+    console.log(process.env.BACKEND_URL);
   }, [messages]);
 
   // Load conversation history on mount
