@@ -23,9 +23,11 @@ function App() {
     console.log(process.env.BACKEND_URL);
   }, [messages]);
 
-  // Load conversation history on mount
+ 
+  
   useEffect(() => {
     fetchHistory();
+    // eslint-disable-next-line
   }, []);
 
   const fetchHistory = async () => {
