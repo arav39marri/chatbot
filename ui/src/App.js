@@ -20,12 +20,14 @@ function App() {
 
   useEffect(() => {
     scrollToBottom();
-    console.log(process.env.BACKEND_URL);
+    console.log(API_URL);
+    // eslint-disable-next-line
   }, [messages]);
 
  
   
   useEffect(() => {
+    
     fetchHistory();
     // eslint-disable-next-line
   }, []);
